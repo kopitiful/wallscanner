@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WallScanner — Leitungssucher per Magnetometer</title>
+<meta name="description" content="Stromleitungen und Metall in Wänden orten mit dem Magnetometer deines Smartphones. 100 % offline, keine Werbung, keine Datensammlung.">
+<style>
+  :root {
+    --blue: #1E88E5;
+    --navy: #0f2f47;
+    --green: #43A047;
+    --yellow: #FDD835;
+    --red: #E53935;
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #e6edf3;
+    --muted: #8b949e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  header {
+    text-align: center;
+    padding: 64px 24px 48px;
+    background: radial-gradient(circle at 50% 0%, rgba(30,136,229,0.15), transparent 60%);
+  }
+  header img.logo { width: 180px; height: auto; margin-bottom: 24px; }
+  header h1 { font-size: 2.4rem; margin-bottom: 8px; }
+  header .tagline { font-size: 1.2rem; color: var(--muted); margin-bottom: 32px; }
+
+  .btn {
+    display: inline-block;
+    background: var(--blue);
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: transform 0.15s, background 0.15s;
+  }
+  .btn:hover { background: #1565C0; transform: translateY(-2px); }
+  .btn-note { display: block; margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
+
+  /* Zones */
+  .zones { display: flex; gap: 16px; justify-content: center; margin: 48px 0; flex-wrap: wrap; }
+  .zone {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px 24px;
+    flex: 1 1 200px;
+    max-width: 260px;
+    border-left: 5px solid;
+  }
+  .zone.green { border-color: var(--green); }
+  .zone.yellow { border-color: var(--yellow); }
+  .zone.red { border-color: var(--red); }
+  .zone h3 { font-size: 1rem; margin-bottom: 4px; }
+  .zone .range { font-size: 0.85rem; color: var(--muted); }
+
+  /* Features */
+  section { padding: 48px 0; }
+  section h2 { font-size: 1.6rem; text-align: center; margin-bottom: 32px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .feature {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .feature .icon { font-size: 1.8rem; margin-bottom: 12px; }
+  .feature h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .feature p { font-size: 0.92rem; color: var(--muted); }
+
+  /* How to install */
+  .steps { counter-reset: step; max-width: 640px; margin: 0 auto; }
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+  }
+  .step::before {
+    counter-increment: step;
+    content: counter(step);
+    background: var(--blue);
+    color: #fff;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+  .step p { font-size: 0.95rem; }
+
+  /* Disclaimer */
+  .disclaimer {
+    background: rgba(229,57,53,0.08);
+    border: 1px solid rgba(229,57,53,0.3);
+    border-radius: 12px;
+    padding: 24px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 32px;
+  }
+  .disclaimer h3 { color: var(--red); margin-bottom: 10px; font-size: 1rem; }
+
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid #21262d;
+  }
+  footer a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <img class="logo" src="assets/logo.png" alt="WallScanner Logo">
+    <h1>WallScanner</h1>
+    <p class="tagline">Leitungssucher &amp; Stud Finder per Magnetometer</p>
+    <a class="btn" href="wallscanner.apk" download>APK herunterladen</a>
+    <span class="btn-note">Android 8.0+ · ~2 MB · 100 % offline</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <p style="text-align:center; font-size:1.15rem; max-width:640px; margin:0 auto;">
+    Nie wieder blind bohren. WallScanner verwandelt dein Smartphone in einen
+    Leitungssucher und hilft dir, Stromleitungen, Metallträger und Rohre hinter
+    der Wand zu orten — bevor du den Bohrer ansetzt.
+  </p>
+
+  <div class="zones">
+    <div class="zone green">
+      <h3>🟢 Sicher</h3>
+      <span class="range">0–10 µT · kein Signal</span>
+    </div>
+    <div class="zone yellow">
+      <h3>🟡 Vorsicht</h3>
+      <span class="range">10–25 µT · Metall in der Nähe</span>
+    </div>
+    <div class="zone red">
+      <h3>🔴 Achtung</h3>
+      <span class="range">&gt;25 µT · Leitung dahinter</span>
+    </div>
+  </div>
+
+  <section>
+    <h2>Funktionen</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">🧲</div>
+        <h3>Echtzeit-Magnetometer</h3>
+        <p>Misst das Magnetfeld deines Handys und zeigt Abweichungen sofort als Delta in Mikrotesla an.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🎯</div>
+        <h3>Farb-Gauge</h3>
+        <p>Übersichtliche Anzeige mit grün, gelb und rot — du siehst auf einen Blick, was hinter der Wand steckt.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📳</div>
+        <h3>Vibration &amp; Ton</h3>
+        <p>Im roten Bereich pulsiert das Handy. Ein Geigerzähler-Ton wird schneller, je stärker das Signal.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📈</div>
+        <h3>Live-Verlaufsgraph</h3>
+        <p>Der Signalverlauf der letzten Sekunden macht Peaks beim Abfahren der Wand sichtbar.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🎚️</div>
+        <h3>Tara-Nullpunkt</h3>
+        <p>Ein Tastendruck neutralisiert das Erdmagnetfeld — danach schlägt nur echtes Metall aus.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔒</div>
+        <h3>100 % offline</h3>
+        <p>Keine Internetverbindung, keine Werbung, keine Datensammlung. Funktioniert überall.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Installation</h2>
+    <div class="steps">
+      <div class="step"><p><strong>APK herunterladen</strong> — auf den Button oben tippen.</p></div>
+      <div class="step"><p><strong>Installation erlauben</strong> — Android fragt nach „Installation aus unbekannten Quellen". Für den Browser aktivieren.</p></div>
+      <div class="step"><p><strong>Öffnen</strong> — App starten, Rückseite an die Wand halten und Nullpunkt setzen.</p></div>
+      <div class="step"><p><strong>Scannen</strong> — langsam über die Wand gleiten und Ausschläge beobachten.</p></div>
+    </div>
+
+    <div class="disclaimer">
+      <h3>Haftungsausschluss</h3>
+      <p>Diese App wird ohne jegliche Gewährleistung bereitgestellt; die Nutzung
+      erfolgt auf eigene Gefahr. Das Magnetometer eines Smartphones ist kein
+      zugelassenes Messgerät — nicht alle Leitungen oder Objekte erzeugen ein
+      messbares Signal, Fehlmessungen sind möglich. Der Entwickler übernimmt
+      keinerlei Haftung für Schäden durch Bohrarbeiten oder das Vertrauen auf
+      Messergebnisse. Vor jeder Bohrung Baupläne prüfen und im Zweifel einen
+      Fachmann hinzuziehen.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>WallScanner · entwickelt von kopitiful · <a href="mailto:tilohue@gmx.de">tilohue@gmx.de</a></p>
+  <p style="margin-top:6px;"><a href="privacy-policy.html">Datenschutzerklärung</a></p>
+</footer>
+
+</body>
+</html>
