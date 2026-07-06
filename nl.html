@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="nl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WallScanner — Leitungssucher per Magnetometer</title>
-<meta name="description" content="Stromleitungen und Metall in Wänden orten mit dem Magnetometer deines Smartphones. 100 % offline, keine Werbung, keine Datensammlung.">
+<title>WallScanner — Leidingzoeker via Magnetometer</title>
+<meta name="description" content="Vind elektrische leidingen en metaal in muren met de magnetometer van je smartphone. 100% offline, geen reclame, geen dataopslag.">
 <style>
   :root {
     --blue: #1E88E5;
@@ -26,7 +26,6 @@
   }
   .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
-  /* Hero */
   header {
     text-align: center;
     padding: 64px 24px 48px;
@@ -50,7 +49,6 @@
   .btn:hover { background: #1565C0; transform: translateY(-2px); }
   .btn-note { display: block; margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
 
-  /* Zones */
   .zones { display: flex; gap: 16px; justify-content: center; margin: 48px 0; flex-wrap: wrap; }
   .zone {
     background: var(--card);
@@ -66,20 +64,14 @@
   .zone h3 { font-size: 1rem; margin-bottom: 4px; }
   .zone .range { font-size: 0.85rem; color: var(--muted); }
 
-  /* Features */
   section { padding: 48px 0; }
   section h2 { font-size: 1.6rem; text-align: center; margin-bottom: 32px; }
   .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-  .feature {
-    background: var(--card);
-    border-radius: 12px;
-    padding: 24px;
-  }
+  .feature { background: var(--card); border-radius: 12px; padding: 24px; }
   .feature .icon { font-size: 1.8rem; margin-bottom: 12px; }
   .feature h3 { font-size: 1.05rem; margin-bottom: 6px; }
   .feature p { font-size: 0.92rem; color: var(--muted); }
 
-  /* How to install */
   .steps { counter-reset: step; max-width: 640px; margin: 0 auto; }
   .step {
     display: flex;
@@ -105,7 +97,6 @@
   }
   .step p { font-size: 0.95rem; }
 
-  /* Disclaimer */
   .disclaimer {
     background: rgba(229,57,53,0.08);
     border: 1px solid rgba(229,57,53,0.3);
@@ -142,97 +133,96 @@
   <div class="container">
     <img class="logo" src="assets/logo.png" alt="WallScanner Logo">
     <h1>WallScanner</h1>
-    <p class="tagline">Leitungssucher &amp; Stud Finder per Magnetometer</p>
-    <a class="btn" href="wallscanner.apk" download>APK herunterladen</a>
-    <span class="btn-note">Android 8.0+ · ~2 MB · 100 % offline</span>
+    <p class="tagline">Leidingzoeker &amp; Stud Finder via Magnetometer</p>
+    <a class="btn" href="wallscanner.apk" download>APK downloaden</a>
+    <span class="btn-note">Android 8.0+ · ~1,4 MB · 100% offline</span>
   </div>
 </header>
 
 <div class="container">
 
   <p style="text-align:center; font-size:1.15rem; max-width:640px; margin:0 auto;">
-    Nie wieder blind bohren. WallScanner verwandelt dein Smartphone in einen
-    Leitungssucher und hilft dir, Stromleitungen, Metallträger und Rohre hinter
-    der Wand zu orten — bevor du den Bohrer ansetzt.
+    Nooit meer blind boren. WallScanner verandert je smartphone in een leidingzoeker
+    en helpt je om elektrische leidingen, metalen balken en buizen achter de muur
+    te vinden — voordat je de boor erin zet.
   </p>
 
   <div class="zones">
     <div class="zone green">
-      <h3>🟢 Sicher</h3>
-      <span class="range">0–10 µT · kein Signal</span>
+      <h3>🟢 Veilig</h3>
+      <span class="range">0–10 µT · geen signaal</span>
     </div>
     <div class="zone yellow">
-      <h3>🟡 Vorsicht</h3>
-      <span class="range">10–25 µT · Metall in der Nähe</span>
+      <h3>🟡 Voorzichtig</h3>
+      <span class="range">10–25 µT · metaal in de buurt</span>
     </div>
     <div class="zone red">
-      <h3>🔴 Achtung</h3>
-      <span class="range">&gt;25 µT · Leitung dahinter</span>
+      <h3>🔴 Opgelet</h3>
+      <span class="range">&gt;25 µT · leiding direct achter de muur</span>
     </div>
   </div>
 
   <section>
-    <h2>Funktionen</h2>
+    <h2>Functies</h2>
     <div class="features">
       <div class="feature">
         <div class="icon">🧲</div>
-        <h3>Echtzeit-Magnetometer</h3>
-        <p>Misst das Magnetfeld deines Handys und zeigt Abweichungen sofort als Delta in Mikrotesla an.</p>
+        <h3>Realtime Magnetometer</h3>
+        <p>Meet het magnetisch veld van je telefoon en toont afwijkingen direct als delta in microtesla.</p>
       </div>
       <div class="feature">
         <div class="icon">🎯</div>
-        <h3>Farb-Gauge</h3>
-        <p>Übersichtliche Anzeige mit grün, gelb und rot — du siehst auf einen Blick, was hinter der Wand steckt.</p>
+        <h3>Kleurmeter</h3>
+        <p>Duidelijke weergave in groen, geel en rood — je ziet in één oogopslag wat er achter de muur zit.</p>
       </div>
       <div class="feature">
         <div class="icon">📳</div>
-        <h3>Vibration &amp; Ton</h3>
-        <p>Im roten Bereich pulsiert das Handy. Ein Geigerzähler-Ton wird schneller, je stärker das Signal.</p>
+        <h3>Trillen &amp; Geluid</h3>
+        <p>In het rode gebied trilt de telefoon automatisch. Een geigerteller-toon wordt sneller naarmate het signaal sterker is.</p>
       </div>
       <div class="feature">
         <div class="icon">📈</div>
-        <h3>Live-Verlaufsgraph</h3>
-        <p>Der Signalverlauf der letzten Sekunden macht Peaks beim Abfahren der Wand sichtbar.</p>
+        <h3>Live Verloopgrafiek</h3>
+        <p>Het signaalverloop van de laatste seconden maakt pieken zichtbaar tijdens het scannen van de muur.</p>
       </div>
       <div class="feature">
         <div class="icon">🎚️</div>
-        <h3>Tara-Nullpunkt</h3>
-        <p>Ein Tastendruck neutralisiert das Erdmagnetfeld — danach schlägt nur echtes Metall aus.</p>
+        <h3>Tara-nulpunt</h3>
+        <p>Één druk neutraliseert het aardmagnetisch veld — daarna slaat alleen echt metaal de meter uit.</p>
       </div>
       <div class="feature">
         <div class="icon">🔒</div>
-        <h3>100 % offline</h3>
-        <p>Keine Internetverbindung, keine Werbung, keine Datensammlung. Funktioniert überall.</p>
+        <h3>100% Offline</h3>
+        <p>Geen internetverbinding, geen reclame, geen dataopslag. Werkt overal.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Installation</h2>
+    <h2>Installatie</h2>
     <div class="steps">
-      <div class="step"><p><strong>APK herunterladen</strong> — auf den Button oben tippen.</p></div>
-      <div class="step"><p><strong>Installation erlauben</strong> — Android fragt nach „Installation aus unbekannten Quellen". Für den Browser aktivieren.</p></div>
-      <div class="step"><p><strong>Öffnen</strong> — App starten, Rückseite an die Wand halten und Nullpunkt setzen.</p></div>
-      <div class="step"><p><strong>Scannen</strong> — langsam über die Wand gleiten und Ausschläge beobachten.</p></div>
+      <div class="step"><p><strong>APK downloaden</strong> — tik op de knop hierboven.</p></div>
+      <div class="step"><p><strong>Installatie toestaan</strong> — Android vraagt om "Installatie uit onbekende bronnen". Activeer dit voor je browser.</p></div>
+      <div class="step"><p><strong>Openen</strong> — start de app, houd de achterkant tegen de muur en stel het nulpunt in.</p></div>
+      <div class="step"><p><strong>Scannen</strong> — beweeg langzaam over de muur en let op de uitslag.</p></div>
     </div>
 
     <div class="disclaimer">
-      <h3>Haftungsausschluss</h3>
-      <p>Diese App wird ohne jegliche Gewährleistung bereitgestellt; die Nutzung
-      erfolgt auf eigene Gefahr. Das Magnetometer eines Smartphones ist kein
-      zugelassenes Messgerät — nicht alle Leitungen oder Objekte erzeugen ein
-      messbares Signal, Fehlmessungen sind möglich. Der Entwickler übernimmt
-      keinerlei Haftung für Schäden durch Bohrarbeiten oder das Vertrauen auf
-      Messergebnisse. Vor jeder Bohrung Baupläne prüfen und im Zweifel einen
-      Fachmann hinzuziehen.</p>
+      <h3>Aansprakelijkheidsbeperking</h3>
+      <p>Deze app wordt aangeboden zonder enige garantie; gebruik is geheel op eigen risico.
+      De magnetometer van een smartphone is geen gecertificeerd meetinstrument — niet alle
+      leidingen of objecten produceren een meetbaar signaal en meetfouten zijn mogelijk.
+      De ontwikkelaar aanvaardt geen enkele aansprakelijkheid voor schade door boorwerkzaamheden
+      of het vertrouwen op meetresultaten. Controleer voor elk boorgat de bouwplannen en
+      raadpleeg bij twijfel een vakman.</p>
     </div>
   </section>
 
 </div>
 
 <footer>
-  <p>WallScanner · entwickelt von kopitiful · <a href="mailto:tilohue@gmx.de">tilohue@gmx.de</a></p>
-  <p style="margin-top:6px;"><a href="privacy-policy.html">Datenschutzerklärung</a></p>
+  <p>WallScanner · ontwikkeld door kopitiful · <a href="mailto:tilohue@gmx.de">tilohue@gmx.de</a></p>
+  <p style="margin-top:6px;"><a href="privacy-policy.html">Privacybeleid</a></p>
 </footer>
 
 </body>
